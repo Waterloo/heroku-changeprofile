@@ -175,7 +175,7 @@ var FB
 	
 	function setcookie(){
   
-			  $.get( "js-login.php?inte="+Math.random(), function( data ) {
+			  $.get( "jslogin.php?inte="+Math.random(), function( data ) {
 						console.log(data)
 				  
 				});

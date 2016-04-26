@@ -1,13 +1,7 @@
 <?php
 
-  require('../vendor/autoload.php');  
-  require( __DIR__.'/cred.php' );
-  $fb = new Facebook\Facebook(array(
-    'app_id'                => $_YOUR_APP_ID,
-    'app_secret'            => $_YOUR_APP_SECRET,
-    'default_graph_version' => '$v2.3',
-    ));
-	
+require( __DIR__.'/facebook_start.php' );
+
 
 
 $helper = $fb->getJavaScriptHelper();

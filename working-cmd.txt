@@ -1,0 +1,15 @@
+
+heroku login
+
+heroku create
+
+
+git commit -m "txt"
+
+To build
+
+	git push heroku master
+	
+To view logs 	
+
+	heroku logs --tail  >app.log
