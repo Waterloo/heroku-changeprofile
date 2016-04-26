@@ -115,7 +115,8 @@
 	  	<form action="update.php" method='post'>
 	   	 <label for="update" >Status:</label>
 		  <textarea class="u-full-width" placeholder="" name="text"></textarea>
-		  <input class="button-primary" value="Update" type="submit">
+		  <input class="button-primary" value="Post to Facebook" type="submit">
+		    
 		</form>
 
 	     
