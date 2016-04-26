@@ -70,7 +70,7 @@ var FB
       appId      : '217849308606209',
       xfbml   : false,  // disable xfbml improves the page load time
     	version : 'v2.2', // use version 2.4
-		status  : false, // Check for user login status right away
+		status  : true, // Check for user login status right away
 	  cookie: true // This is important, it's not enabled by default
 
     });
@@ -91,70 +91,29 @@ var FB
    
    
    
-  function sendUserInformation(){
-	
-	
-		setcookie();
-		
-		
-		FB.api('/me?fields=first_name', function(data) {
-		  var welcomeBlock = document.getElementById('fb-welcome');
-		  welcomeBlock.innerHTML = 'Hello, ' + data.first_name + '!';
-		  
-		  FB.api(
-				"/me/picture",
-				function (response) {
-				  if (response && !response.error) {
-					/* handle the result */
-					
-					
-					 document.getElementById('fbprofile').setAttribute("src",response.data.url)
-					
-					  
-					    
-	   
-					 
-					
-				  }else{
-					 
-					 
-				  }
-				}
-			);
 
-		 
-		  //Set profile picture now 
-		  
-		  
-		});
-		
-
-}
 
 	function onLogin(response) {
 	  if (response.status == 'connected') {
 		  
 		  
 		   document.getElementById('btnlogin').style.visibility="hidden"
-					  document.getElementById('btnchangeprofile').style.visibility="visible"
+				//	  document.getElementById('btnchangeprofile').style.visibility="visible"
 					  
-		  sendUserInformation()
+		  $.get( "jslogin.php?inte="+Math.random(), function( data ) {
+						
+				  document.location="overlay.php"
+				});
 	
 	  }else{
 		  
 		   
-					  document.getElementById('btnchangeprofile').style.visibility="hidden"
+					//  document.getElementById('btnchangeprofile').style.visibility="hidden"
 					  document.getElementById('btnlogin').style.visibility="visible"
 	  }
 	}
 
-	
-	function changeprofile(){
-		
-		document.location="overlay.php"
-		 
-		
-	}
+
 	
     function authenticate() {
 		if(!FB)
@@ -178,10 +137,7 @@ var FB
 	
 	function setcookie(){
   
-			  $.get( "jslogin.php?inte="+Math.random(), function( data ) {
-						console.log(data)
-				  
-				});
+			  
 		
 		}
 	
