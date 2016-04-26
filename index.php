@@ -68,9 +68,11 @@ var FB
   window.fbAsyncInit = function() {
     FB.init({
       appId      : '217849308606209',
-      xfbml      : true,
-	  cookie: true, // This is important, it's not enabled by default
-      version    : 'v2.6'
+      xfbml   : false,  // disable xfbml improves the page load time
+    	version : 'v2.3', // use version 2.4
+		status  : false, // Check for user login status right away
+	  cookie: true // This is important, it's not enabled by default
+
     });
 
     // ADD ADDITIONAL FACEBOOK CODE HERE
