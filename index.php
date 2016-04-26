@@ -61,6 +61,8 @@
 	
 
 
+	<script type="text/javascript" src="js/jquery.js"></script>
+	
 <script>
 var FB
   window.fbAsyncInit = function() {
@@ -195,7 +197,7 @@ $(function() {
   
 </script>
 
-	<script type="text/javascript" src="js/jquery.js"></script>
+	
 	
 	
 
