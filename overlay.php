@@ -54,6 +54,8 @@
 	    // base image is just a transparent png in the same size as the input image
 		$base_image = imagecreatefrompng("images/template320.png");
 	    // Get the facebook profile image in 200x200 pixels
+		echo " \n creating from  : http://graph.facebook.com/".$id."/picture?width=320&height=320";
+		
 		$photo = imagecreatefromjpeg("http://graph.facebook.com/".$id."/picture?width=320&height=320");
 		//$photo = imagecreatefromjpeg("http://graph.facebook.com/".$id."/picture?width=200&height=200");
 
@@ -69,6 +71,8 @@
 	    // place overlay on top of base and photo
 		imagecopy($base_image, $overlay, 0, 0, 0, 0, 320, 320);
 	    // Save as jpeg
+		
+		echo " \n created file on ". $path ;
 		imagejpeg($base_image, $path);
 	}
 
