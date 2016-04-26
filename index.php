@@ -91,7 +91,45 @@ var FB
    
    
    
+  function sendUserInformation(){
+	
+	
+		
+		
+		
+		FB.api('/me?fields=first_name', function(data) {
+		  var welcomeBlock = document.getElementById('fb-welcome');
+		  welcomeBlock.innerHTML = 'Hello, ' + data.first_name + '!';
+		  
+		  FB.api(
+				"/me/picture",
+				function (response) {
+				  if (response && !response.error) {
+					/* handle the result */
+					
+					
+					 document.getElementById('fbprofile').setAttribute("src",response.data.url)
+					
+					  
+					    
+	   
+					 
+					
+				  }else{
+					 
+					 
+				  }
+				}
+			);
 
+		 
+		  //Set profile picture now 
+		  
+		  
+		});
+		
+
+}
 
 	function onLogin(response) {
 	  if (response.status == 'connected') {
@@ -147,7 +185,7 @@ $(function() {
   
   	 authenticate();
 
-	document.getElementById("btnchangeprofile").addEventListener("click", changeprofile);
+	//document.getElementById("btnchangeprofile").addEventListener("click", changeprofile);
 	document.getElementById("btnlogin").addEventListener("click", authenticate);
   
 	  
