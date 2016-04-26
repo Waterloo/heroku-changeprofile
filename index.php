@@ -69,6 +69,7 @@ var FB
     FB.init({
       appId      : '217849308606209',
       xfbml      : true,
+	  cookie: true, // This is important, it's not enabled by default
       version    : 'v2.6'
     });
 
