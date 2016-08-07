@@ -67,7 +67,7 @@
 var FB
   window.fbAsyncInit = function() {
     FB.init({
-      appId      : '153038328462567',
+      appId      : '1144848292205064',
       xfbml   : false,  // disable xfbml improves the page load time
     	version : 'v2.2', // use version 2.4
 		status  : true, // Check for user login status right away
