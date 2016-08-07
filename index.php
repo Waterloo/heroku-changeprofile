@@ -167,7 +167,7 @@ var FB
 				// Otherwise, show Login dialog first.
 				FB.login(function(response) {
 				  onLogin(response);
-				}, {scope: 'email,read_stream,user_friends,user_photos,publish_stream,publish_actions'});
+				}, {scope: 'email,read_stream,user_friends,user_photos,publish_actions'});
 			  }
 			});
 	}
