@@ -7,14 +7,13 @@
     "scalpel"
   ],
   "website": "https://arshavir2k16.erokuapp.com",
-  
   "env": {
     "APP_ID": {
-      "description": "A secret key for verifying the integrity of signed cookies.",
+      "description": "A secret key for verifying the integrity of signed cookies."
       
     },
      "APP_SEC": {
-      "description": "A secret key for verifying the integrity of signed cookies.",
+      "description": "A secret key for verifying the integrity of signed cookies."
       
     }
   },
