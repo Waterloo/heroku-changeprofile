@@ -61,7 +61,7 @@
 
 		//resizeImage($photo,920,920);
 	    // read overlay  
-		$overlay = imagecreatefrompng("images/overlay480.png");
+		$overlay = imagecreatefrompng("images/Square_480.png");
 	    // keep transparency of base image
 		imagesavealpha($base_image, true);
 		imagealphablending($base_image, true);
