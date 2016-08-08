@@ -66,10 +66,10 @@
 		imagesavealpha($base_image, true);
 		imagealphablending($base_image, true);
 	    // place photo onto base (reading all of the photo and pasting unto all of the base)
-		imagecopyresampled($base_image, $photo, 0, 0, 0, 0, 320, 320, 320, 320);
+		imagecopyresampled($base_image, $photo, 0, 0, 0, 0, 480, 480, 480, 480);
 		
 	    // place overlay on top of base and photo
-		imagecopy($base_image, $overlay, 0, 0, 0, 0, 320, 320);
+		imagecopy($base_image, $overlay, 0, 0, 0, 0, 480, 480);
 	    // Save as jpeg
 		
 		//echo " \n created file on ". $path ;
