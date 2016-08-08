@@ -6,7 +6,7 @@
    	//$r = new HttpRequest('https://graph.facebook.com/me?access_token='.$r, HttpRequest::METH_POST);
 
 	$output = curly($token);
-	echo $output;
+	//echo $output;
 	$r=json_decode($output, true);
 	$id= $r['id'];
 	$path = "cache/".$id.".jpg";
@@ -16,7 +16,7 @@
 		create($id, $path);
 	}
 	else{
-		echo " \n already exitst : ".$path;
+		//echo " \n already exitst : ".$path;
 	}
 	//override line 13. Always create for testing purposes
 	//create($id, $path);
@@ -52,16 +52,16 @@
 	function create($id, $path){
 
 	    // base image is just a transparent png in the same size as the input image
-		$base_image = imagecreatefrompng("images/template320.png");
+		$base_image = imagecreatefrompng("images/template480.png");
 	    // Get the facebook profile image in 200x200 pixels
-		echo " \n creating from  : http://graph.facebook.com/".$id."/picture?width=320&height=320";
+	//	echo " \n creating from  : http://graph.facebook.com/".$id."/picture?width=320&height=320";
 		
-		$photo = imagecreatefromjpeg("http://graph.facebook.com/".$id."/picture?width=320&height=320");
+		$photo = imagecreatefromjpeg("http://graph.facebook.com/".$id."/picture?width=480&height=480");
 		//$photo = imagecreatefromjpeg("http://graph.facebook.com/".$id."/picture?width=200&height=200");
 
 		//resizeImage($photo,920,920);
 	    // read overlay  
-		$overlay = imagecreatefrompng("images/overlay320n.png");
+		$overlay = imagecreatefrompng("images/overlay480.png");
 	    // keep transparency of base image
 		imagesavealpha($base_image, true);
 		imagealphablending($base_image, true);
@@ -72,7 +72,7 @@
 		imagecopy($base_image, $overlay, 0, 0, 0, 0, 320, 320);
 	    // Save as jpeg
 		
-		echo " \n created file on ". $path ;
+		//echo " \n created file on ". $path ;
 		imagejpeg($base_image, $path);
 	}
 
@@ -114,7 +114,7 @@
 	       <br/>
 	  	<form action="update.php" method='post'>
 	   	 <label for="update" >Status:</label>
-		  <textarea class="u-full-width" placeholder="" name="text"></textarea>
+		  <textarea class="u-full-width" placeholder="" name="text">#Arshavir2K16</textarea>
 		  <input class="button-primary" value="Post to Facebook" type="submit">
 		    
 		</form>
