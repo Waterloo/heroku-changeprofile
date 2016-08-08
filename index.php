@@ -47,7 +47,7 @@
         </div>
         <div class="content">
         <br/>
-        <p>Show your support for xxx cause by updating your facebook picture. </p>       
+        <p>Show your support for Arshavir by updating your facebook picture. </p>       
           <a class="button button-primary" id="btnlogin"  > Log in to Facebook </a> 
 		  <p/>
 		  <a class="button button-primary" id="btnchangeprofile" style="visibility:hidden"  > Change profile </a> 
